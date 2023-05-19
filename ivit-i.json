@@ -1,0 +1,7 @@
+{
+  "PROJECT": "ivit-i",
+  "PLATFORM": "hailo",
+  "FRAMEWORK": "hailort",
+  "VERSION": "v1.1",
+  "TAG": "runtime"
+}
