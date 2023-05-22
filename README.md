@@ -35,7 +35,7 @@ iVIT-I is an AI inference tool which could support multiple AI framework and thi
         h               help.
         >>p.
         ```
-        
+
 3. Run Samples
 
     * [Source Sample](samples/classification_sample/README.md)
@@ -45,4 +45,4 @@ iVIT-I is an AI inference tool which could support multiple AI framework and thi
     * [iDevice Sample](samples/ivit_device_sample/README.md)
 
 # Python Library Documentation
-[iVIT-I-Intel API Docs](https://innoipa.github.io/ivit-i-hailo/)
+[iVIT-I-hailo API Docs](https://innoipa.github.io/ivit-i-hailo/)
