@@ -66,6 +66,12 @@ inheritance.</p>
 <dd>
 <div class="desc"><p>get avg fps from preprocess , inference ,and postprocess.</p></div>
 </dd>
+<dt id="ivit_i.core.models.model.iModel.get_thres"><code class="name flex">
+<span>def <span class="ident">get_thres</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get threshold.</p></div>
+</dd>
 <dt id="ivit_i.core.models.model.iModel.inference"><code class="name flex">
 <span>def <span class="ident">inference</span></span>(<span>self)</span>
 </code></dt>
@@ -90,6 +96,17 @@ inheritance.</p>
 <dd>
 <div class="desc"><p>release resource of divice after done everything.</p></div>
 </dd>
+<dt id="ivit_i.core.models.model.iModel.set_thres"><code class="name flex">
+<span>def <span class="ident">set_thres</span></span>(<span>self, new_threshold: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set threshold between 0 to 1.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>new_threshold</code></strong> :&ensp;<code>float</code></dt>
+<dd>Set threshold that you want.</dd>
+</dl></div>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -110,12 +127,14 @@ inheritance.</p>
 <ul>
 <li>
 <h4><code><a title="ivit_i.core.models.model.iModel" href="#ivit_i.core.models.model.iModel">iModel</a></code></h4>
-<ul class="">
+<ul class="two-column">
 <li><code><a title="ivit_i.core.models.model.iModel.get_avg_fps" href="#ivit_i.core.models.model.iModel.get_avg_fps">get_avg_fps</a></code></li>
+<li><code><a title="ivit_i.core.models.model.iModel.get_thres" href="#ivit_i.core.models.model.iModel.get_thres">get_thres</a></code></li>
 <li><code><a title="ivit_i.core.models.model.iModel.inference" href="#ivit_i.core.models.model.iModel.inference">inference</a></code></li>
 <li><code><a title="ivit_i.core.models.model.iModel.postprocess" href="#ivit_i.core.models.model.iModel.postprocess">postprocess</a></code></li>
 <li><code><a title="ivit_i.core.models.model.iModel.preprocess" href="#ivit_i.core.models.model.iModel.preprocess">preprocess</a></code></li>
 <li><code><a title="ivit_i.core.models.model.iModel.release" href="#ivit_i.core.models.model.iModel.release">release</a></code></li>
+<li><code><a title="ivit_i.core.models.model.iModel.set_thres" href="#ivit_i.core.models.model.iModel.set_thres">set_thres</a></code></li>
 </ul>
 </li>
 </ul>
