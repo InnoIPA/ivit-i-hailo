@@ -4,7 +4,7 @@ iVIT Object Detection Sample, this sample demonstrates how to do inference of im
 ## Getting Start
 * Clone Repository    
     ```bash
-    git clone  git clone  https://github.com/MaxChangInnodisk/ivit-i-hailo.git && cd ivit-i-hailo
+    git clone  https://github.com/InnoIPA/ivit-i-hailo.git && cd ivit-i-hailo
     ```
 * Run iVIT-I Docker Container
     ```bash

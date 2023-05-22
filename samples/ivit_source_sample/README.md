@@ -4,7 +4,7 @@ iVIT Source Module will create a thread to keeping update the lastest frame and 
 ## Getting Start
 * Clone Repository    
     ```bash
-    git clone  https://github.com/MaxChangInnodisk/ivit-i-hailo.git && cd ivit-i-hailo
+    git clone  https://github.com/InnoIPA/ivit-i-hailo.git && cd ivit-i-hailo
     ```
 * Run iVIT-I Docker Container
     ```bash
@@ -39,7 +39,7 @@ iVIT Source Module will create a thread to keeping update the lastest frame and 
     ${EXEC_PY} -i path/to/image/file
     
     # Resize
-    ${EXEC_PY} -i path/to/image/file -s 640x480
+    ${EXEC_PY} -i path/to/image/file -r 640x480
     ```
 
 * Video
@@ -48,7 +48,7 @@ iVIT Source Module will create a thread to keeping update the lastest frame and 
     ${EXEC_PY} -i path/to/video/file
     
     # Resize
-    ${EXEC_PY} -i path/to/video/file -s 640x480
+    ${EXEC_PY} -i path/to/video/file -r 640x480
     ```
 
 * RTSP
