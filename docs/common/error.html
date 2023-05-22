@@ -31,33 +31,56 @@
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
 <dt id="ivit_i.common.error.handle_exception"><code class="name flex">
-<span>def <span class="ident">handle_exception</span></span>(<span>error=None, title='', exit=False)</span>
+<span>def <span class="ident">handle_exception</span></span>(<span>error: Optional[Exception] = None, title: str = '', exit: bool = False) ‑> str</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Handle exception and return concatenated message</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>error</code></strong> :&ensp;<code>Union[Exception, None]</code>, optional</dt>
+<dd>the exception need parse. Defaults to None.</dd>
+<dt><strong><code>title</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>the error title. Defaults to "".</dd>
+<dt><strong><code>exit</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>need to exit system. Defaults to False.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>return concatenated error message: "{title} [{type}] {detail} ( {file_name} in line {line_num} )"</dd>
+</dl></div>
 </dd>
 <dt id="ivit_i.common.error.parse_exception"><code class="name flex">
-<span>def <span class="ident">parse_exception</span></span>(<span>error=None)</span>
+<span>def <span class="ident">parse_exception</span></span>(<span>error: Optional[Exception] = None) ‑> tuple</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Parsing Exception
-- args
-- error: python exception
-- return
-- type
-: exception type ( name )
-- detail
-: exception detail
-- file_name : which file cause exception
-- func_name : which function cause exception
-- line_num
-: which line cause exception</p></div>
+<div class="desc"><p>Parse Exception</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>error</code></strong> :&ensp;<code>Union[Exception, None]</code>, optional</dt>
+<dd>the exception need parse. Defaults to None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>tuple</code></dt>
+<dd><em>description</em></dd>
+</dl></div>
 </dd>
 <dt id="ivit_i.common.error.simple_exception"><code class="name flex">
-<span>def <span class="ident">simple_exception</span></span>(<span>error=None)</span>
+<span>def <span class="ident">simple_exception</span></span>(<span>error: Optional[Exception] = None) ‑> Tuple[str, str]</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Provide simple exception format which only has type and detail</p></div>
+<div class="desc"><p>Provide simple exception format which only has type and detail</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>error</code></strong> :&ensp;<code>Union[Exception, None]</code>, optional</dt>
+<dd>the exception need parse. Defaults to None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Tuple[str, str]</code></dt>
+<dd>return the type and detail of exception</dd>
+</dl></div>
 </dd>
 </dl>
 </section>
