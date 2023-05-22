@@ -35,6 +35,7 @@ iVIT-I is an AI inference tool which could support multiple AI framework and thi
         h               help.
         >>p.
         ```
+        
 3. Run Samples
 
     * [Source Sample](samples/classification_sample/README.md)
