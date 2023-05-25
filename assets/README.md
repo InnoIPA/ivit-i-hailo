@@ -4,8 +4,8 @@
 * build-essential package (needed to compile the PCIe driver)
 * (Optional) bison, flex, libelf-dev and dkms packages (needed to register the PCIe driver using DKMS)
 ```bash
-    sudo apt-get update
-    sudo apt-get install build-essential bison flex libelf-dev dkms
+sudo apt-get update
+sudo apt-get install build-essential bison flex libelf-dev dkms
 ```
 # Download <pcie_driver>.deb
 You can download pcie_driver via [hailo official website](https://hailo.ai/developer-zone/sw-downloads/) . 
