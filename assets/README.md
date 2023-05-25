@@ -10,7 +10,7 @@ sudo apt-get install build-essential bison flex libelf-dev dkms
 # Download <pcie_driver>.deb
 You can download pcie_driver via [hailo official website](https://hailo.ai/developer-zone/sw-downloads/) . 
 
-When you at the hailo official website , you can follow the picture like bellow to download `hailort-pcie-driver_4.12.1_all.deb`.  
+When you at the hailo official website , you can follow the picture like below to download `hailort-pcie-driver_4.12.1_all.deb`.  
 ![](./images/download_guide.png) 
 
 You can follow the commond like bellow to install. 
