@@ -34,6 +34,13 @@ TAG=$(cat "${CONF}" | jq -r '.TAG')
 INTERATIVE=true
 QUICK=false
 
+#HAILO docker args 
+HAILORT_ENABLE_SERVICE=false #-e hailort_enable_service=yes 
+DISABLE_MULTIPLEXER=false #-e HAILO_DISABLE_MULTIPLEXER=1 
+ENABLE_MULTI_DEVICE_SCHEDULER=false #-e HAILO_ENABLE_MULTI_DEVICE_SCHEDULER=1 
+ENABLE_HAILO_MONITOR=false #-e HAILO_MONITOR=1 
+HAILORT_LOGGER_PATH=false #-e HAILORT_LOGGER_PATH=${HAILORT_LOGGER_PATH} 
+
 # Help
 function help(){
 	echo "Run the iVIT-I environment."
@@ -74,6 +81,12 @@ SET_NAME="--name ${DOCKER_NAME}"
 MOUNT_WS="-w ${WS} -v $(pwd):${WS}"
 SET_TIME="-v /etc/localtime:/etc/localtime:ro"
 SET_NETS="--net=host"
+
+
+# [Hailo]
+FIREWARE="-v /lib/firmware:/lib/firmware"
+KERNEL_MODULE="-v /lib/modules:/lib/modules"
+UDEV="-v /lib/udev/rules.d:/lib/udev/rules.d"
 
 # [DEFINE COMMAND]
 RUN_CMD="bash"
@@ -116,6 +129,9 @@ ${SET_NAME} \
 ${SET_PRIVILEG} \
 ${MOUNT_ACCELERATOR} \
 ${MOUNT_CAM} \
+${FIREWARE} \
+${KERNEL_MODULE} \
+${UDEV} \
 ${SET_NETS} \
 ${SET_MEM} \
 ${SET_TIME} \
