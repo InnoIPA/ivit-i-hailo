@@ -14,31 +14,22 @@ function download(){
 # ------------------------------------------------------------------------------
 
 echo "$(date +"%F %T") Download model from google drive ..."
-ROOT=$(dirname `realpath ${0}`)
-echo $ROOT
-cd $ROOT
-
-TRG_FOLDER="/workspace/model"
-if [[ ! -d ${TRG_FOLDER} ]];then
-	mkdir ${TRG_FOLDER}
-fi
-
-if [[ ! (${TRG_FOLDER} == *"${ROOT}"*) ]];then
-	echo "$(date +"%F %T") Move terminal to $(realpath ${TRG_FOLDER})"
-	cd ${TRG_FOLDER}
-fi
+MODEL_PATH="/workspace/model/"
+cd ${MODEL_PATH}
 
 # ------------------------------------------------------------------------------
 
 # Model: https://drive.google.com/file/d/1QDZomBNPjb7XbeWyVc6ATtnzuJ5LaUCa/view?usp=sharing
-NAME="yolov4-leaky"
+NAME="yolov4-leaky-512"
 ZIP="${NAME}.zip"
+TARGET_PATH="${MODEL_PATH}${NAME}"
 if [[ -d ${NAME} ]];then
 	echo "$(date +"%F %T") Model already exist"
 	exit 1
 fi
 
-GID="1QDZomBNPjb7XbeWyVc6ATtnzuJ5LaUCa"
+GID="1ntUQp9pfgKOZP_2o67Mjx8VsgNgY1Nmv"
+
 download $GID ${ZIP}
 chmod a+w $NAME
-unzip $ZIP && rm "${ZIP}"
+unzip $ZIP -d ${TARGET_PATH} && rm "${ZIP}"
