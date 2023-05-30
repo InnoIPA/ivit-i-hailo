@@ -87,7 +87,8 @@ SET_NETS="--net=host"
 FIREWARE="-v /lib/firmware:/lib/firmware"
 KERNEL_MODULE="-v /lib/modules:/lib/modules"
 UDEV="-v /lib/udev/rules.d:/lib/udev/rules.d"
-
+DEFAULT_HAILORT_LOGGER_PATH="/dev/null/"
+HAILORT_LOGGER_PATH="-e HAILORT_LOGGER_PATH=${DEFAULT_HAILORT_LOGGER_PATH}"
 # [DEFINE COMMAND]
 RUN_CMD="bash"
 
@@ -101,7 +102,7 @@ SET_MEM="--ipc=host"
 # ========================================================
 
 # [ACCELERATOR]
-MOUNT_ACCELERATOR="--device /dev/dri --device-cgroup-rule='c 189:* rmw'"
+# MOUNT_ACCELERATOR="--device /dev/dri --device-cgroup-rule='c 189:* rmw'"
 
 # [VISION] Set up Vision option for docker if need
 if [[ ! -z $(echo ${DISPLAY}) ]];then
@@ -127,7 +128,6 @@ DOCKER_CMD="docker run \
 ${SET_CONTAINER_MODE} \
 ${SET_NAME} \
 ${SET_PRIVILEG} \
-${MOUNT_ACCELERATOR} \
 ${MOUNT_CAM} \
 ${FIREWARE} \
 ${KERNEL_MODULE} \
@@ -137,7 +137,9 @@ ${SET_MEM} \
 ${SET_TIME} \
 ${MOUNT_WS} \
 ${SET_VISION} \
+${HAILORT_LOGGER_PATH} \
 ${DOCKER_IMAGE} ${RUN_CMD}"
+
 
 # ========================================================
 # Logout and wait
