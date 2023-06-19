@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
-<title>ivit_i.core API documentation</title>
+<title>ivit_i.core.models.model API documentation</title>
 <meta name="description" content="" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
@@ -19,32 +19,95 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title">Module <code>ivit_i.core</code></h1>
+<h1 class="title">Module <code>ivit_i.core.models.model</code></h1>
 </header>
 <section id="section-intro">
 </section>
 <section>
-<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
 <dl>
-<dt><code class="name"><a title="ivit_i.core.helpers" href="helpers.html">ivit_i.core.helpers</a></code></dt>
+<dt id="ivit_i.core.models.model.iModel"><code class="flex name class">
+<span>class <span class="ident">iModel</span></span>
+<span>(</span><span>model_path: str, device: Optional[str] = 'HAILO')</span>
+</code></dt>
 <dd>
-<div class="desc"><p>Copyright (C) 2020-2023 Intel Corporation …</p></div>
+<div class="desc"><p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+<p>iModle module namespace, exposing factory functions for all ops and other classes.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>model_path</code></strong> :&ensp;<code>str</code></dt>
+<dd>path to model.</dd>
+<dt><strong><code>device</code></strong> :&ensp;<code>str</code></dt>
+<dd>device name , defalt is "HAILO".</dd>
+</dl></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>abc.ABC</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li>ivit_i.core.models.iClassification.iClassification</li>
+<li>ivit_i.core.models.iDetection.iDetection</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="ivit_i.core.models.model.iModel.get_avg_fps"><code class="name flex">
+<span>def <span class="ident">get_avg_fps</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>get avg fps from preprocess , inference ,and postprocess.</p></div>
 </dd>
-<dt><code class="name"><a title="ivit_i.core.models" href="models/index.html">ivit_i.core.models</a></code></dt>
+<dt id="ivit_i.core.models.model.iModel.get_thres"><code class="name flex">
+<span>def <span class="ident">get_thres</span></span>(<span>self)</span>
+</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Get threshold.</p></div>
 </dd>
-<dt><code class="name"><a title="ivit_i.core.utils" href="utils.html">ivit_i.core.utils</a></code></dt>
+<dt id="ivit_i.core.models.model.iModel.inference"><code class="name flex">
+<span>def <span class="ident">inference</span></span>(<span>self)</span>
+</code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>process wrapper</p></div>
+</dd>
+<dt id="ivit_i.core.models.model.iModel.postprocess"><code class="name flex">
+<span>def <span class="ident">postprocess</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>postprocess wrapper</p></div>
+</dd>
+<dt id="ivit_i.core.models.model.iModel.preprocess"><code class="name flex">
+<span>def <span class="ident">preprocess</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>preprocess wrapper</p></div>
+</dd>
+<dt id="ivit_i.core.models.model.iModel.release"><code class="name flex">
+<span>def <span class="ident">release</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>release resource of divice after done everything.</p></div>
+</dd>
+<dt id="ivit_i.core.models.model.iModel.set_thres"><code class="name flex">
+<span>def <span class="ident">set_thres</span></span>(<span>self, new_threshold: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set threshold between 0 to 1.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>new_threshold</code></strong> :&ensp;<code>float</code></dt>
+<dd>Set threshold that you want.</dd>
+</dl></div>
 </dd>
 </dl>
-</section>
-<section>
-</section>
-<section>
-</section>
-<section>
+</dd>
+</dl>
 </section>
 </article>
 <nav id="sidebar">
@@ -55,14 +118,23 @@
 <ul id="index">
 <li><h3>Super-module</h3>
 <ul>
-<li><code><a title="ivit_i" href="../index.html">ivit_i</a></code></li>
+<li><code><a title="ivit_i.core.models" href="index.html">ivit_i.core.models</a></code></li>
 </ul>
 </li>
-<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<li><h3><a href="#header-classes">Classes</a></h3>
 <ul>
-<li><code><a title="ivit_i.core.helpers" href="helpers.html">ivit_i.core.helpers</a></code></li>
-<li><code><a title="ivit_i.core.models" href="models/index.html">ivit_i.core.models</a></code></li>
-<li><code><a title="ivit_i.core.utils" href="utils.html">ivit_i.core.utils</a></code></li>
+<li>
+<h4><code><a title="ivit_i.core.models.model.iModel" href="#ivit_i.core.models.model.iModel">iModel</a></code></h4>
+<ul class="two-column">
+<li><code><a title="ivit_i.core.models.model.iModel.get_avg_fps" href="#ivit_i.core.models.model.iModel.get_avg_fps">get_avg_fps</a></code></li>
+<li><code><a title="ivit_i.core.models.model.iModel.get_thres" href="#ivit_i.core.models.model.iModel.get_thres">get_thres</a></code></li>
+<li><code><a title="ivit_i.core.models.model.iModel.inference" href="#ivit_i.core.models.model.iModel.inference">inference</a></code></li>
+<li><code><a title="ivit_i.core.models.model.iModel.postprocess" href="#ivit_i.core.models.model.iModel.postprocess">postprocess</a></code></li>
+<li><code><a title="ivit_i.core.models.model.iModel.preprocess" href="#ivit_i.core.models.model.iModel.preprocess">preprocess</a></code></li>
+<li><code><a title="ivit_i.core.models.model.iModel.release" href="#ivit_i.core.models.model.iModel.release">release</a></code></li>
+<li><code><a title="ivit_i.core.models.model.iModel.set_thres" href="#ivit_i.core.models.model.iModel.set_thres">set_thres</a></code></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
